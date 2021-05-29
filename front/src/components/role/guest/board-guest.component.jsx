@@ -4,7 +4,7 @@ import './board-guest.component.scss'
 import Footer from '../../footer/footer.component'
 import { Link } from 'react-router-dom'
 
-import vnomad from './VNOMAD.mp4'
+// import vnomad from './VNOMAD.mp4'
 // import video from './video-resort.mp4'
 
 // const url = 'https://www.youtube.com/embed/xLDM6ukEMtc?autoplay=1&mute=0&controls=0&showinfo=0&rel=0&playlist=xLDM6ukEMtc&loop=1'
@@ -40,7 +40,7 @@ export default class Guest extends React.Component {
                 {successful ? (
                     <div className="top">
                         {/* Up file mp4 here */}
-                        <video src={vnomad} autoPlay loop muted />
+                        <video src={''} autoPlay loop muted />
                         <div className="overlay"></div>
 
                         <div className="title">
