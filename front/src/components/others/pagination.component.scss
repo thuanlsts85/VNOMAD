@@ -1,0 +1,58 @@
+nav {
+    ul {
+        margin: 0;
+        li {
+            list-style: none;
+            // border: 1px solid red;
+            .page-link {
+                border: none;
+                background-color: transparent;
+                i {
+                    font-size: 30px;
+                    color: black;
+                }
+                i:hover {
+                    color: gray;
+                }
+                .num{
+                    font-size: 30px;
+                    color: black;
+                    font-weight: bold;
+                }
+                .num:hover {
+                    color: gray;
+                }
+            }
+            .page-link:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1320px) {
+    nav {
+        ul {
+            li {
+                .page-link {
+                    i {
+                        font-size: 20px;
+                    }
+                }          
+            }
+        }
+    }
+}
+@media only screen and (max-width:768px) {
+    nav {
+        ul {
+            li {
+                .page-link {
+                    i {
+                        font-size: 15px;
+                    }
+                }          
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.detail-page {
+    margin-top: 100px;
+    .row {
+        // border: 2px solid black;
+        margin: auto;
+        .col-lg-6 {
+            // border: 2px solid red;
+            padding: 0px 70px;
+
+            ul {
+                .image {
+                    padding: 0px 15px;
+                    // overflow: hidden;
+                }
+                li {
+                    list-style: none;
+                    // margin-top: 10px;
+                    img {
+                        width: 100%;
+                        height: 300px;
+                        object-fit: cover;
+                        // object-position:10%;
+                        border-radius: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 4px !important;
+                    }
+
+                    .place {
+                        font-weight: bold;
+                        font-size: 25px;
+                        margin-top: 15px;
+                        text-align: center;
+                    }
+
+                    .category {
+                        text-align: center;
+                        display: flex;
+                        justify-content: space-evenly;
+                        margin-top: 15px;
+                        button {
+                            border: 2px solid #67b542;
+                            background-color: #67b542;
+                            color: white;
+                            border-radius: 50px;
+                            padding: 10px;
+                            width: 150px;
+                            height: fit-content;
+                            i {
+                                padding-right: 5px;
+                            }
+                            font-weight: bold;
+                        }
+                        .city {
+                            button {
+                                background-color: red;
+                                border: 2px solid red;
+                                color: white;
+                                font-style: italic;
+                            }
+                        }
+                    }
+
+                    .description {
+                        margin-top: 15px;
+                        font-style: italic;
+                        text-align: justify;
+                    }
+
+                    .latlng {
+                        margin-top: 15px;
+                        text-align: center;
+                        display: flex;
+                        justify-content: space-evenly;
+                        // background-color: red;
+                        .lat {
+                            strong {
+                                padding-right: 5px;
+                            }
+                        }
+                        .lng {
+                            strong {
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                    .address {
+                        margin-top: 15px;
+                        i {
+                            color: red;
+                            font-size: 25px;
+                            padding-right: 10px;
+                        }
+                    }
+                    .url {
+                        margin-top: 15px;
+                        font-style: italic;
+                        color: #655ae5;
+                        i {
+                            color: blue;
+                            font-size: 20px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-5 {
+        }
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    /* For mobile phones: */
+    .detail-page {
+        .row {
+            .col-lg-6 {
+                ul {
+                    font-size: 13px;
+                    li {
+                        .place {
+                            font-size: 17px;
+                        }
+                        .category {
+                            button {
+                                width: 100px;
+                            }
+                        }
+                        .latlng {
+                            display: block;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.register {
+    // max-width: 1000px;
+    width: 100%;
+    padding: 150px 500px 30px 500px;
+    // height: 700px;
+    overflow: hidden;
+    .card {
+        border-radius: 10px;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.08) 5px 10px 15px 10px !important;
+        padding: 20px 10px;
+        .title {
+            text-align: center;
+            font-family: "RocknRoll One", sans-serif;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .borderbottom {
+            border-bottom: 2px solid black;
+            padding: 10px;
+        }
+        Form {
+            padding: 10px;
+            font-family: "RocknRoll One", sans-serif;
+            .form-group {
+                padding-top: 20px;
+                text-align: center;
+                Input {
+                    border: 1px solid black;
+                }
+                button{
+                    width: 10px;
+                }
+                .btn {
+                    --btn-color:#fff;
+                    margin-top: 15px;
+                    height: 50px;
+                    width: 100px;
+                    background-color: transparent;
+                    border: none !important;
+                    outline: none !important;
+                    // font-style: italic;
+                    font-size: 15px;
+                    cursor: pointer;
+                    position: relative;
+                    color: var(--btn-color);
+                    border-radius: 200px;
+                    span {
+                        position: absolute;
+                        border: none !important;
+                        outline: none !important;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 200px;
+                        // clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+                    }
+                }
+                .btn-primary span {
+                    --bg-btn-primary: black;
+                    background-color: var(--bg-btn-primary);
+                }
+                .btn > span:nth-child(2) {
+                    --translate: -10px;
+                    display: grid;
+                    place-items: center;
+                    transform: translate(var(--translate), var(--translate));
+                    transition: transform 0.2s ease-in-out;
+                }
+                .btn > span:nth-child(1) {
+                    opacity: 0.6;
+                }
+
+                .btn:hover > span:nth-child(2) {
+                    transform: translate(calc(var(--translate) / 2), calc(var(--translate) / 2));
+                }
+
+                .btn:active > span:nth-child(2) {
+                    transform: translate(0, 0);
+                }
+            }
+            .register-link{
+                position: relative;
+                // text-align: center;
+                margin-top: 30px;
+                font-size: 13px;
+                color:#b1b1b1;
+                font-style: italic;
+            }
+        }
+    }
+}

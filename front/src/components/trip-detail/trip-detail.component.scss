@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+.trip-detail-page {
+    // overflow: hidden;
+    letter-spacing: -0.84px;
+    .row {
+        margin: 70px auto auto auto;
+        border: 1px solid black;
+        .left {
+            padding: 0;
+            box-shadow: 10px 0px 10px 5px white !important;
+            border: 0px;
+            .trip-city-top {
+                position: relative;
+                padding: 0 15px;
+                background-color: black;
+                .trip-city-image {
+                    .city-img {
+                        // width: 100%;
+                        height: 220px;
+                        position: relative;
+                        padding: auto;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            z-index: 2;
+                            opacity: 0.75;
+                            border: 0px;
+                            // mix-blend-mode: overlay;
+                        }
+                        .cityname {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            h1 {
+                                font-family: "Great Vibes", cursive;
+                                z-index: 2;
+                                font-size: 6em;
+                                text-transform: capitalize;
+                                font-style: italic;
+                                font-weight: 500;
+                                color: white;
+                                width: fit-content;
+                                height: fit-content;
+                                margin: 0px;
+                            }
+                        }
+                    }
+
+                    .t-c-info {
+                        position: absolute;
+                        background-color: transparent;
+                        z-index: 1000;
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        border: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .trip-card {
+                            background-color: white;
+                            width: 400px;
+                            height: 150px;
+                            position: absolute;
+                            top: 10.5em;
+                            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                            border-radius: 20px;
+                            .title {
+                                width: 100%;
+                                height: 94px;
+                                overflow: scroll;
+                                text-transform: capitalize;
+                                font-size: 3em;
+                                font-weight: 700;
+                                letter-spacing: -0.84px;
+                                text-align: center;
+                                text-decoration: underline;
+                                border-radius: 20px 20px 0 0;
+                                color: #fd7e14;
+
+                                // white-space: nowrap;
+                            }
+
+                            ::-webkit-scrollbar {
+                                width: 0px;
+                                scroll-behavior: smooth;
+                            }
+
+                            .trip-date {
+                                position: absolute;
+                                bottom: 0.5em;
+                                // background-color: red;
+                                height: auto;
+                                width: 100%;
+                                padding: 0px 15px;
+                                border-radius: 20px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: 1em;
+                                font-weight: 600;
+                                font-style: italic;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .trip-city-body {
+                width: 100%;
+                padding: 0 15px;
+                z-index: 100;
+                .trip-button {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10px;
+                    button {
+                        text-transform: uppercase;
+                        width: auto;
+                        height: 35px;
+                        padding: 5px 10px;
+                        background-color: black;
+                        color: white;
+                        border-radius: 10px;
+                        font-weight: 700;
+                        border: 0px;
+                        transform: scale(0.9);
+                    }
+
+                    .to-profile {
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                    button:hover {
+                        transform: scale(1.1);
+                    }
+                    button:active {
+                        transform: scale(1);
+                    }
+                }
+
+                .place-detail {
+                    // background-color: red;
+                    padding: 10px;
+                    margin-top: 70px;
+                    width: 100%;
+                    .detail {
+                        display: flex;
+                        gap: 10px;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        background-color: white;
+                        margin-bottom: 20px;
+                        border-top: 1px solid rgb(224, 224, 224);
+                        padding-top: 20px;
+                        .name-des {
+                            // background-color: white;
+                            width: 100%;
+                            gap: 10px;
+                            .name {
+                                width: 100%;
+                                background-color: #f3f4f6;
+                                color: #525154;
+                                padding: 10px;
+                                text-transform: capitalize;
+                                font-size: 1.1em;
+                                font-weight: 700;
+                                box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                border-radius: 10px;
+                            }
+
+                            .des {
+                                width: 100%;
+                                height: 119px;
+                                overflow-y: scroll;
+                                background-color: #f3f4f6;
+                                color: #909193;
+                                font-style: italic;
+                                text-align: justify;
+
+                                padding: 10px;
+                                margin-top: 10px;
+                                box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                border-radius: 10px;
+                            }
+                            ::-webkit-scrollbar {
+                                width: 3px;
+                            }
+                            ::-webkit-scrollbar-thumb {
+                                background: rgba(0, 0, 0, 0.2);
+                                // border-radius: 50%;
+                            }
+                        }
+                        .img {
+                            width: 50%;
+                            height: 180px;
+                            position: relative;
+                            overflow: hidden;
+                            border-radius: 10px;
+                            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                cursor: pointer;
+                                transition: 0.5s ease-in-out;
+                            }
+                            img:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                        .btn {
+                            display: flex;
+                            padding: auto;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            justify-content: space-between;
+                            align-items: center;
+                            // background-color: black;
+                            button {
+                                width: 100%;
+                                height: 100%;
+                                color: white;
+                                padding: 5px;
+                                background-color: #000;
+                                border-radius: 50%;
+                                border: 0px;
+                                transform: scale(0.9);
+                                // transition: 0.1s ease-in-out;
+                            }
+                            .view {
+                                text-decoration: none;
+                                color: white;
+                            }
+                            button:hover {
+                                transform: scale(1.1);
+                            }
+                            button:active {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            right: 1em;
+            z-index: 0;
+            padding: auto;
+        }
+
+        @media only screen and (max-width: 1245px) {
+            .left {
+                .trip-city-top {
+                    .trip-city-image {
+                        .city-img {
+                            .cityname {
+                                h1 {
+                                    font-size: 4em;
+                                }
+                            }
+                        }
+                        .t-c-info {
+                            .trip-card {
+                                width: 300px;
+                                height: 120px;
+                                top: 11em;
+                                .title {
+                                    font-size: 2.5em;
+                                }
+                                .trip-date {
+                                    font-size: 0.9em;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .trip-city-body {
+                    .trip-button {
+                        button {
+                            width: 50px;
+                        }
+                    }
+
+                    .place-detail {
+                        margin-top: 50px;
+                        .detail {
+                            .name-des {
+                                .name {
+                                    padding: 5px 10px;
+                                    font-size: 1.05em;
+                                }
+                                .des {
+                                    height: 100px;
+                                    font-size: 0.9em;
+                                    padding: 5px 10px;
+                                }
+                            }
+                            .img {
+                                width: 55%;
+                                height: 147px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .right {
+                display: none;
+            }
+        }
+    }
+}

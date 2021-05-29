@@ -1,0 +1,118 @@
+.category-page {
+    overflow: hidden;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -0.84px;
+
+    .top {
+        background-color: #f0f2f5;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+        height: 95vh;
+        form {
+            max-width: 350px;
+            height: 350px;
+            background-color: white;
+            width: 100%;
+            border-radius: 20px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 0 20px;
+            gap: 20px;
+
+            input {
+                border: 0px;
+                border-bottom: 2px solid #000;
+                padding: 0 10px;
+                width: 100%;
+                position: relative;
+            }
+
+            button {
+                text-transform: uppercase;
+                letter-spacing: -0.7px;
+                font-size: 1em;
+                transform: scale(1.05);
+                background-color: #555;
+                color: white;
+                border: 1px solid #555;
+                width: 60px;
+            }
+            button:hover {
+                transform: scale(1.15);
+            }
+            button:active {
+                transform: scale(1);
+            }
+        }
+        .cate {
+            max-width: 350px;
+            height: 350px;
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            margin: 10px;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px;
+
+            .col-title {
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+                border-bottom: 1px solid violet;
+            }
+
+            .title {
+                text-align: left;
+                .cn {
+                    padding: 20px 0 0 0;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .button {
+                text-align: right;
+                .btn {
+                    padding: 0;
+                    .buttons {
+                        padding: 20px 0 0 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        button {
+                            text-transform: uppercase;
+                            letter-spacing: -0.7px;
+                            font-size: 0.9em;
+                            // width: auto;
+                            transform: scale(1);
+                            // font-weight: 600;
+                            background-color: #555;
+                            color: white;
+                            border: 1px solid #555;
+                        }
+                        button:hover {
+                            transform: scale(1.1);
+                        }
+                        button:active {
+                            transform: scale(1);
+                        }
+                        .edit {
+                            width: 60px;
+                        }
+                        .delete {
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

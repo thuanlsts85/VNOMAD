@@ -1,0 +1,27 @@
+#animation {
+    width: 83.33333333px;
+    height: 126px;
+    background: url("https://38.media.tumblr.com/tumblr_mb4zsyUYCT1rvuv0d.png");
+    margin: 0 auto;
+    animation: walk-cycle 1s steps(6) infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotateY(180deg) translate(50%, -50%);
+    // background-color: red;
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+@keyframes walk-cycle {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -500px;
+    }
+}

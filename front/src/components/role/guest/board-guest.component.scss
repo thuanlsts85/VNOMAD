@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-homepage {
+    font-family: "Poppins", sans-serif;
+
+    .top {
+        position: absolute;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        min-height: 100vh;
+        color: white;
+        padding-left: 80px;
+        padding-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        overflow: hidden;
+        .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 100px 80px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            opacity: 0.8;
+            
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // background-color: #03a8f4;
+            background-color: rgba(255, 255, 255, 0.623);
+            mix-blend-mode: overlay;
+        }
+
+        .text {
+            position: relative;
+            z-index: 10;
+            h2 {
+                font-size: 3.5em;
+                font-weight: 800;
+                line-height: 1em;
+                text-transform: uppercase;
+            }
+            h3 {
+                font-size: 2.3em;
+                font-weight: 700;
+                line-height: 1em;
+                text-transform: uppercase;
+                // margin-bottom: 50px;
+            }
+            p {
+                font-size: 1.1em;
+                margin: 20px 0;
+                font-weight: 400;
+                max-width: 680px;
+                text-align: left;
+                animation-name: tensecond;
+                animation-duration: 5.6s;
+                animation-delay: 11.1s;
+                animation-timing-function: ease-in-out;
+                // padding-top: 100px;
+                strong {
+                    font-style: italic;
+                }
+
+                @keyframes tensecond {
+                    0% {
+                        padding-top: 0px;
+                    }
+                    25%{
+                        padding-top: 100px;
+                    }
+                    50% {
+                        padding-top: 100px;
+                    }
+                    75%{
+                        padding-top: 100px;
+                    }
+                    100%{
+                        padding-top: 0px;
+                    }
+                }
+            }
+
+            button {
+                display: inline-block;
+                font-size: 1em;
+                background-color: #fff;
+                color: #000;
+                letter-spacing: 2px;
+                padding: 10px 30px;
+                margin-top: 10px;
+                border: 0px;
+                text-transform: uppercase;
+                font-weight: 600;
+                transition: 0.2s;
+            }
+            button:hover {
+                letter-spacing: 6px;
+            }
+        }
+
+        .social-media {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            z-index: 10;
+            align-items: center;
+            li {
+                list-style: none;
+                i {
+                    display: inline-block;
+                    // filter: invert(1);
+                    margin-right: 40px;
+                    padding: 5px;
+                    transform: scale(01.5);
+                    transition: 0.5s;
+                    cursor: pointer;
+                }
+                i:hover {
+                    transform: scale(01.5) translateY(-15px);
+                }
+
+                .fa-facebook-f {
+                    animation: facebook;
+                    animation-duration: 1s;
+                    animation-delay: 3s;
+                    animation-timing-function: ease-in-out;
+                }
+                @keyframes facebook {
+                    0% {
+                        transform: scale(01.5);
+                    }
+                    50% {
+                        transform: scale(01.5) translateY(-10px);
+                    }
+                }
+
+                .fa-instagram {
+                    animation: instagram;
+                    animation-duration: 1s;
+                    animation-delay: 3.3s;
+                    animation-timing-function: ease-in-out;
+                }
+                @keyframes instagram {
+                    0% {
+                        transform: scale(01.5);
+                    }
+                    50% {
+                        transform: scale(01.5) translateY(-10px);
+                    }
+                }
+
+                .fa-twitter {
+                    animation: twitter;
+                    animation-duration: 1s;
+                    animation-delay: 3.6s;
+                    animation-timing-function: ease-in-out;
+                }
+                @keyframes twitter {
+                    0% {
+                        transform: scale(01.5);
+                    }
+                    50% {
+                        transform: scale(01.5) translateY(-10px);
+                    }
+                }
+
+                .fa-youtube {
+                    animation: youtube;
+                    animation-duration: 1s;
+                    animation-delay: 3.9s;
+                    animation-timing-function: ease-in-out;
+                }
+                @keyframes youtube {
+                    0% {
+                        transform: scale(01.5);
+                    }
+                    50% {
+                        transform: scale(01.5) translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,414 @@
+.profile {
+    overflow: hidden;
+    // justify-content: center;
+    text-align: center;
+    height: auto;
+    padding-top: 70px;
+
+    button {
+        cursor: pointer;
+    }
+    button:hover {
+        animation-name: color;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+    }
+
+    @keyframes color {
+        from {
+            color: transparent;
+        }
+        to {
+            color: white;
+        }
+    }
+
+    .row {
+        padding: 50px;
+        background-color: #f0f2f5;
+        .col-3 {
+            width: 25%;
+            .card {
+                gap: 10px;
+                padding: 10px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                border-radius: 30px;
+                border: none;
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                }
+                .card-header {
+                    border: 2px solid black;
+                    border-right: none;
+                    border-left: none;
+                    background-color: white;
+                }
+                .container {
+                    text-align: left;
+                    ul {
+                        display: grid;
+                        grid-template-columns: repeat(20, auto);
+                        li {
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+            .card:hover {
+                box-shadow: 0px 16px 24px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .col-9 {
+            letter-spacing: -0.84px;
+            width: 75%;
+            text-align: left;
+            .list-trip-by-user {
+                .container {
+                    border-radius: 20px;
+                    margin-bottom: 30px;
+                    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+                    .row {
+                        background-color: white !important;
+                        border-radius: 20px;
+                        padding: 0;
+                        position: relative;
+                        .col-8 {
+                            background-color: white;
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            border-radius: 20px;
+                            .trip-title {
+                                font-family: "Marko One", serif;
+                                font-size: 20px;
+                                position: relative;
+                                .trip-date {
+                                    font-size: 13px;
+                                    color: #929292ce;
+                                }
+                                .buttons {
+                                    position: absolute;
+                                    top: -2px;
+                                    right: 0;
+
+                                    button {
+                                        width: 65px;
+                                        border: none;
+                                        color: white;
+                                        border-radius: 10px;
+                                        font-size: 10px;
+                                        margin-left: 5px;
+                                        padding: 3px 5px;
+                                        box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0 !important;
+                                    }
+                                    .edit {
+                                        background-color: #28a745;
+                                    }
+
+                                    .delete {
+                                        background-color: #dc3545;
+                                    }
+
+                                    .view {
+                                        background-color: #17a2b8;
+                                    }
+                                }
+                            }
+                            .seperator {
+                                border: 2px solid black;
+                                background-color: black;
+                                width: 100%;
+                            }
+                            .trip-note {
+                                margin: 5px 0px;
+                            }
+                            .trip-city {
+                                margin: 5px 0px;
+                            }
+                            .trip-place {
+                                margin: 5px 0px;
+                                .place {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 32.4%);
+                                    grid-gap: 10px;
+                                    .location {
+                                        background-color: #f8f9fa;
+                                        box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                        border-radius: 20px;
+                                        // text-align: center;
+                                        margin: 10px;
+                                        height: 40px;
+                                        cursor: pointer;
+                                        position: relative;
+                                        img {
+                                            // display: none;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            bottom: 0;
+                                            border-radius: 20px 0 0 20px;
+                                            width: 20%;
+                                            height: 40px;
+                                            object-fit: cover;
+                                            object-position: right;
+                                        }
+                                        .location-name {
+                                            color: black;
+                                            font-size: 13.5px;
+                                            width: 80%;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-35%, -50%);
+                                            white-space: nowrap;
+                                            // font-weight: 400;
+                                            font-style: italic;
+                                        }
+                                        .overlay {
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            right: 0;
+                                            opacity: 0;
+                                            overflow: hidden;
+                                            width: 50%;
+                                            height: 100%;
+                                            transition: 0.5s ease-in-out;
+                                            border-radius: 20px;
+                                            // background-color: blue;
+                                            .text {
+                                                color: black;
+                                                // background-color: red;
+                                                font-size: 20px;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                                white-space: nowrap;
+                                                font-weight: bold;
+                                                font-style: italic;
+                                            }
+                                        }
+                                    }
+                                    .location:hover {
+                                        box-shadow: none;
+                                        .location-name {
+                                            display: none;
+                                        }
+                                        img {
+                                            opacity: 0.3;
+                                            width: 100%;
+                                            border-radius: 20px;
+                                            transition: 0.5s ease-in-out;
+                                        }
+                                        .overlay {
+                                            opacity: 1;
+                                            width: 100%;
+                                            // height: fit-content;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .col-4 {
+                            padding: 0px;
+                            text-align: center;
+                            .img {
+                                img {
+                                    position: relative;
+                                    margin: 10px 0;
+                                    width: 280px;
+                                    height: 280px;
+                                    object-fit: cover;
+                                    object-position: left;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                }
+                                img:hover {
+                                    margin: 0;
+                                    border-radius: 0 20px 20px 0;
+                                    width: 100%;
+                                    transition: 1s ease-in-out;
+                                    object-position: left;
+                                    animation-name: look;
+                                    animation-duration: 4s;
+                                    animation-iteration-count: 2;
+                                    animation-timing-function: ease-in-out;
+                                    animation-direction: alternate;
+                                }
+                                @keyframes look {
+                                    from {
+                                        object-position: left;
+                                    }
+                                    to {
+                                        object-position: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .row.active {
+                        display: none;
+                    }
+
+                    .update-container {
+                        .overlay {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: white;
+                            overflow: hidden;
+                            width: 0;
+                            opacity: 0;
+                            height: 100%;
+                            transition: 0.75s ease-in-out;
+                            border-radius: 20px;
+                            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.103);
+                            padding: 5px 10px;
+
+                            .buttons {
+                                margin: 0;
+                                .update {
+                                    width: fit-content;
+                                    border: none;
+                                    color: white;
+                                    float: right;
+                                    border-radius: 10px;
+                                    font-size: 15px;
+                                    padding: 3px 5px;
+                                    background-color: #1771e6;
+                                    font-family: "Marko One", serif;
+                                    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0 !important;
+                                }
+
+                                .update.hide {
+                                    opacity: 0;
+                                    display: none;
+                                }
+                            }
+
+                            .row {
+                                height: 100%;
+
+                                .col-5 {
+                                    // border: 1px solid green;
+                                    .col-title {
+                                        text-align: center;
+                                        font-size: 30px;
+                                    }
+                                    .c-trip {
+                                        margin: 30px 0;
+                                        .label {
+                                            position: absolute;
+                                            z-index: 1;
+                                            top: -13px;
+                                            left: 30px;
+                                            background-color: white;
+                                            width: fit-content;
+
+                                            strong {
+                                                font-size: 17px;
+                                                color: rgb(141, 141, 141);
+                                            }
+                                        }
+                                        .input {
+                                            position: relative;
+                                            input,
+                                            textarea {
+                                                width: 100%;
+                                                border-radius: 25px 10px 10px 25px;
+                                                padding: 10px 15px;
+                                                border: 2px solid rgb(224, 224, 224);
+                                                border-bottom: none;
+                                                border-right: none;
+                                                box-shadow: rgba(0, 0, 0, 0.08) 2px 4px 6px 0 !important;
+                                            }
+                                            input[value] {
+                                                color: black;
+                                                font-size: 17px;
+                                            }
+                                            input:focus {
+                                                border: 0.5px solid white;
+                                            }
+                                        }
+                                    }
+
+                                    .buttons {
+                                        margin-bottom: 20px;
+                                    }
+                                }
+
+                                .col-7 {
+                                    border-left: 2px solid black;
+                                    position: relative;
+                                    margin: 0px 0px;
+                                    .place-container {
+                                        margin: 15px 30px;
+                                        position: relative;
+                                        .place {
+                                            .each {
+                                                display: grid;
+                                                grid-template-columns: repeat(2, 50%);
+                                                grid-gap: 10px;
+                                                .element {
+                                                    text-align: center;
+                                                    position: relative;
+                                                    .img {
+                                                        overflow: hidden;
+                                                        border-radius: 15px 15px 15px 15px;
+                                                    }
+                                                    .topright {
+                                                        position: absolute;
+                                                        top: 6px;
+                                                        right: 6px;
+                                                    }
+                                                    img {
+                                                        // border: 2px solid black;
+                                                        width: 100%;
+                                                        height: 200px;
+                                                        object-fit: cover;
+                                                        cursor: pointer;
+                                                    }
+                                                    img:hover {
+                                                        transform: scale(1.15);
+                                                        transition: 0.5s ease-in-out;
+                                                    }
+                                                    strong {
+                                                        font-size: 13px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .col-note {
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 6vh;
+                                        font-size: 13px;
+                                        font-style: italic;
+                                        color: rgb(141, 141, 141);
+                                        letter-spacing: -0.5px;
+                                        // strong{
+                                        //     color: black;
+                                        // }
+                                    }
+                                }
+                            }
+                        }
+
+                        .overlay.active {
+                            width: 100%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
